@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Đăng ký</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dangky.css">
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+
+    </head>
+    <body>
+        <form id = "signup" class = "form-content" action = "./DangKy" method="post">
+            <h1>Đăng ký</h1>
+            <div class="input-container">
+                <p class="text">Họ và tên</p>
+                <input type = "text" name = "fullname" placeholder="Nhập họ và tên" required>
+            </div>
+            <div class="input-container">
+                <p class="text">Username</p>  
+                <input type = "text" name = "username" placeholder="Nhập username" required>
+            </div>
+            <div class="input-container">
+                <p class="text">Mật khẩu</p>
+                <input type = "password" name = "password" placeholder="Nhập mật khẩu" required>
+            </div>
+            <div class="input-container">
+                <p class="text">Email</p>
+                <input type = "email" name = "email" placeholder="Nhập địa chỉ email" required>
+            </div>
+            <button type="submit" class="btn">Đăng ký</button>
+        </form>
+
+        <div class="container">
+            <p class="content">Bạn đã có tài khoản?</p>
+            <a href="dangnhap.html"><button class="button">Đăng nhập</button></a>
+        </div>
+    </body>
+</html>

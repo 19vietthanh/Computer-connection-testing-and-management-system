@@ -1,0 +1,71 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 17, 2024, 10:29:02 PM
+    Author     : Viet Thanh
+*/
+
+body {
+    background-color: #f0f0f0; /* Màu nền cho toàn bộ trang */
+    font-family: Arial, sans-serif; /* Font chữ chính */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+    max-width: 400px;
+    margin: auto;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #007bff; /* Màu nền của nút */
+    color: #ffffff; /* Màu chữ của nút */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột qua nút */
+}
+
+a {
+    text-decoration: none; /* Loại bỏ gạch chân cho liên kết */
+    color: #007bff; /* Màu chữ của liên kết */
+}
+
+a:hover {
+    color: #0056b3;
+}
+.text{
+    
+    margin-top: 20px;
+    color: #333;
+}
