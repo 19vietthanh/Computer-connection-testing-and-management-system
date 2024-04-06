@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Màu nền xanh nhạt */
+    color: #333; /* Màu chữ */
+    margin: 10;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #006400; /* Màu xanh lá */
+}
+
+p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #006400; /* Màu nút xanh lá */
+    color: #fff; /* Màu chữ trắng */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #008000; /* Màu nút khi hover */
+}
+.nutchinhsua {
+    background-color: #FFA926; 
+    color: #fff; /* Màu chữ trắng */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.nutchinhsua:hover {
+    background-color: #FF4500; /* Màu nút khi hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #006400; /* Màu nền tiêu đề bảng */
+    color: #fff; /* Màu chữ tiêu đề bảng */
+}
+
+form {
+    margin-top: 20px;
+    display: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #006400; /* Màu nút gửi xanh lá */
+    color: #fff; /* Màu chữ trắng */
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #008000; /* Màu nút gửi khi hover */
+}

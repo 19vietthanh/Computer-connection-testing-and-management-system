@@ -5,7 +5,7 @@
 <html>
     <head>
         <title>Thông tin cá nhân</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="inf_user.css">
         <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
     </head>
 
@@ -38,7 +38,7 @@
         <p>Email: <%= email %></p>
         <p id="password">Mật khẩu: ********</p>
         <button onclick="document.getElementById('password').innerHTML = 'Mật khẩu: <%= password %>';">Hiện mật khẩu</button>
-        <button type="button" class="cap nhat thong tin" onclick="showUpdateForm('<%= fullname %>', '<%= password %>', '<%= email %>')">Chỉnh sửa</button>
+        <button class="nutchinhsua" type="button" class="cap nhat thong tin" onclick="showUpdateForm('<%= fullname %>', '<%= password %>', '<%= email %>')">Chỉnh sửa</button>
 
         <form action="./chinhsuathongtin" method="POST" style="display: none">
             <h3>Chỉnh sửa thông tin người dùng</h3>
