@@ -54,7 +54,7 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 th {
@@ -63,7 +63,7 @@ th {
 }
 
 form {
-    margin-top: 20px;
+    margin-top: 25px;
     display: none;
 }
 
@@ -73,6 +73,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sub
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: center;
 }
 
 input[type="submit"] {
@@ -83,7 +84,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #008000; /* Màu nút gửi khi hover */
+    background-color: #007bff; /* Màu nút gửi khi hover */
 }
 button a{
     text-decoration: none;
