@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff; /* Màu nền xanh nhạt */
     color: #333; /* Màu chữ */
-    margin: 10;
+    margin: 10px;
     padding: 0;
 }
 
@@ -23,7 +23,7 @@ p {
 button {
     background-color: #006400; /* Màu nút xanh lá */
     color: #fff; /* Màu chữ trắng */
-    border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     margin: 5px;
@@ -35,7 +35,7 @@ button:hover {
 .nutchinhsua {
     background-color: #FFA926; 
     color: #fff; /* Màu chữ trắng */
-    border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     margin: 5px;
@@ -85,3 +85,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #008000; /* Màu nút gửi khi hover */
 }
+button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+} 
+a:hover{
+    color: gold;
+font-size: 15px;
+} 

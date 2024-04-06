@@ -145,6 +145,7 @@
         <th colspan="2">Thông tin</th>
         <th rowspan="2">Trạng thái</th>
         <th rowspan="2">Thời gian kết nối</th>
+        <th rowspan="2" style="color: #ff6600">Xóa</th>
     </tr>
     <tr>
         <th>RAM</th>
@@ -169,6 +170,7 @@
         <td><%= rom %></td>
         <td><%= TrangThai %></td>
         <td class="connection-time" data-connection-time="<%= lastConnectionTimeString %>">0 phút trước</td>
+        <td><input type="button" value="🗑️"></td>
     </tr>
     <%
             }

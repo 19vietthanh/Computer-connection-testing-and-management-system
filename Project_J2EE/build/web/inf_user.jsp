@@ -6,10 +6,13 @@
     <head>
         <title>Thông tin cá nhân</title>
         <link rel="stylesheet" href="inf_user.css">
-        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>    
+   
+        
     </head>
 
     <body>
+        <a href="index.jsp" target="target"><button>Trang chủ</button></a>
         <%
             session = request.getSession();
             User loggedInUser = (User) session.getAttribute("user");
