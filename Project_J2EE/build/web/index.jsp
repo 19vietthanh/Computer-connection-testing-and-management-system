@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 <div class="nav">
-<!--    <form action="./home" method="post">
-        <input type="submit" class="homebutton" value="Trang chào mừng">
-    </form>-->
+
     <%
         session = request.getSession();
         User loggedInUser = (User) session.getAttribute("user");
@@ -19,6 +17,9 @@
         }
     %>
     <h2>Xin chào: <%= loggedInUser.getUsername()%></h2>
+    <form action="./thongtin" method="post">
+        <input type="submit" class="homebutton" value="Thông tin User">
+    </form>
     <form class="logout-form" action="./Logout" method="post">
         <input type="submit" class="button" name="logout" value="Đăng xuất">
     </form>
@@ -132,9 +133,10 @@
         </form>
         <a href="update.jsp" class="update">Chỉnh sửa thông tin</a>
 
-        <form action="./delete" method="POST">
+        <form action="./delete" method="POST" onsubmit="return confirmDelete();">
             <input type="submit" class="delete" value="Xóa tất cả dữ liệu">
         </form>
+
     </tr>
     <br>
     <tr>
@@ -185,5 +187,10 @@
         }
     %>
 </table>
+<script>
+    function confirmDelete() {
+        return confirm("Bạn có chắc chắn muốn xóa tất cả dữ liệu không?");
+    }
+</script>
 
 </body>
