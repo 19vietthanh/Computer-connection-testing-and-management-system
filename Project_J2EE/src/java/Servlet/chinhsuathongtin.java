@@ -1,76 +1,63 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package Servlet;
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import java.sql.*;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
-/**
- *
- * @author Viet Thanh
- */
 public class chinhsuathongtin extends HttpServlet {
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet thongtin</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet thongtin at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        PrintWriter out = response.getWriter();
+        
+        String username = request.getParameter("username");
+        String newFullName = request.getParameter("fullname");
+        String newEmail = request.getParameter("email");
+        String newPassword = request.getParameter("password");
+        
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_quanlymaytinh", "root", "");
+            
+            String query = "UPDATE users SET fullname=?, email=?, password=? WHERE username=?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, newFullName);
+            preparedStatement.setString(2, newEmail);
+            preparedStatement.setString(3, newPassword);
+            preparedStatement.setString(4, username);
+            
+            int rowsAffected = preparedStatement.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Chỉnh sửa thành công');");
+                out.println("window.location.href = 'dangnhap.html';");
+                out.println("</script>");
+            } else {
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Không thể chỉnh sửa. Vui lòng thử lại sau');");
+                out.println("window.location.href = 'inf_user.jsp';");
+                out.println("</script>");
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Đã xảy ra lỗi khi chỉnh sửa');");
+            out.println("window.location.href = 'inf_user.jsp';");
+            out.println("</script>");
+        } finally {
+            try {
+                if (preparedStatement != null) {
+                    preparedStatement.close();
+                }
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
