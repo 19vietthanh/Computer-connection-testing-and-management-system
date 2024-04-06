@@ -2,22 +2,21 @@
 <%@ page import="java.sql.*, Data.User" %>
 
 <!DOCTYPE html>
-
-<head>
-    <title>Trang quản lý máy tính</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-<div class="nav">
-
-    <%
-        session = request.getSession();
-        User loggedInUser = (User) session.getAttribute("user");
-        if (loggedInUser == null) {
-            response.sendRedirect("dangnhap.html");
-        }
-    %>
-    <h2>Xin chào: <%= loggedInUser.getUsername()%></h2>
-    <form action="./thongtin" method="post">
+<html>
+    <head>
+        <title>Trang quản lý máy tính</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <div class="nav">
+        <%
+            session = request.getSession();
+            User loggedInUser = (User) session.getAttribute("user");
+            if (loggedInUser == null) {
+                response.sendRedirect("dangnhap.html");
+            }
+        %>
+        <p class="hello">Xin chào:<h2 class="hello_user"> <%= loggedInUser.getUsername()%></h2></p>
+    <form action="inf_user.jsp" method="post">
         <input type="submit" class="homebutton" value="Thông tin User">
     </form>
     <form class="logout-form" action="./Logout" method="post">
@@ -25,7 +24,7 @@
     </form>
 </div>
 <script>
-// Hàm cập nhật thời gian kết nối
+    // Hàm cập nhật thời gian kết nối
     function updateConnectionTime() {
         var connectionTimeElements = document.querySelectorAll('.connection-time');
 
@@ -52,7 +51,7 @@
         });
     }
 
-// Cập nhật thời gian kết nối mỗi 1 giây
+    // Cập nhật thời gian kết nối mỗi 1 giây
     setInterval(updateConnectionTime, 1000);
 
 
@@ -194,3 +193,6 @@
 </script>
 
 </body>
+
+
+</html>

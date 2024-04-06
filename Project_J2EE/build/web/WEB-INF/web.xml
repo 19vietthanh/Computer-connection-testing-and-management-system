@@ -4,10 +4,10 @@
         <servlet-name>KiemTra</servlet-name>
         <servlet-class>Servlet.KiemTra</servlet-class>
     </servlet>
-    <servlet>
+<!--    <servlet>
         <servlet-name>HomePage</servlet-name>
         <servlet-class>Servlet.Welcome</servlet-class>
-    </servlet>
+    </servlet>-->
     <servlet>
         <servlet-name>DangKy</servlet-name>
         <servlet-class>Servlet.DangKy</servlet-class>
@@ -36,14 +36,18 @@
         <servlet-name>search</servlet-name>
         <servlet-class>Servlet.search</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>chinhsuathongtin</servlet-name>
+        <servlet-class>Servlet.chinhsuathongtin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>KiemTra</servlet-name>
         <url-pattern>/KiemTra</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
+<!--    <servlet-mapping>
         <servlet-name>HomePage</servlet-name>
         <url-pattern>/home</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>DangKy</servlet-name>
         <url-pattern>/DangKy</url-pattern>
@@ -71,5 +75,9 @@
     <servlet-mapping>
         <servlet-name>search</servlet-name>
         <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>chinhsuathongtin</servlet-name>
+        <url-pattern>/chinhsuathongtin</url-pattern>
     </servlet-mapping>
 </web-app>
