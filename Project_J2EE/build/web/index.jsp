@@ -7,14 +7,15 @@
         <title>Trang quản lý máy tính</title>
         <link rel="stylesheet" href="home.css">
         <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    <div class="nav">
+    
         <%
             session = request.getSession();
             User loggedInUser = (User) session.getAttribute("user");
-            if (loggedInUser == null || session.isNew()) { // Thêm điều kiện session.isNew()                
+            if (loggedInUser == null) {             
                 response.sendRedirect("dangnhap.html");
             }
         %>
+    <div class="nav">    
         <p class="hello">Xin chào:<h2 class="hello_user"> <%= loggedInUser.getUsername()%></h2></p>
     <form action="inf_user.jsp" method="post">
         <input type="submit" class="homebutton" value="Thông tin User">
@@ -171,7 +172,6 @@
         <td><%= TrangThai %></td>
         <td class="connection-time" data-connection-time="<%= lastConnectionTimeString %>">0 phút trước</td>
         <td>
-
             <%--Xóa từng máy trong hệ thống--%>
             <form action="./xoamay" method="POST" onsubmit="return confirmDelete();">
                 <input type="hidden" name="IP" value="<%= IP %>">
