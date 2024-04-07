@@ -9,6 +9,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/**
+ *
+ * @author Viet Thanh
+ */
+
 public class search extends HttpServlet {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/db_quanlymaytinh";

@@ -8,6 +8,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import java.net.InetAddress;
 
+/**
+ *
+ * @author Viet Thanh
+ */
+
 public class TestConn extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -36,7 +41,7 @@ public class TestConn extends HttpServlet {
                 String ip = rs.getString("IP");
                 String status = ping(ip);
 
-                // Update the database with the ping status
+                //Cập nhật trạng thái
                 updateStmt = conn.prepareStatement("UPDATE tt_computer SET status = ? WHERE IP = ?");
                 updateStmt.setString(1, status);
                 updateStmt.setString(2, ip);

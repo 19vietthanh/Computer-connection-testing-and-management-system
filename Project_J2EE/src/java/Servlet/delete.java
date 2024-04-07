@@ -13,6 +13,7 @@ import java.util.logging.Logger;
  *
  * @author Viet Thanh
  */
+
 public class delete extends HttpServlet {
 
     @Override

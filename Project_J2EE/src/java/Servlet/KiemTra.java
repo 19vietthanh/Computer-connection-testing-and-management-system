@@ -10,6 +10,7 @@ import java.sql.*;
  *
  * @author Viet Thanh
  */
+
 public class KiemTra extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -41,12 +42,13 @@ public class KiemTra extends HttpServlet {
                 // Thực thi truy vấn
                 rs = pstmt.executeQuery();
                 if (rs.next()) {
-                    // Đăng nhập thành công
+                    // Đăng nhập thành công đưa người dùng vào vào session
                     HttpSession session = request.getSession();
                     session.setAttribute("user", nd);
+                    // Chuyển hướng đến trang chủ (index.jsp) 
                     response.sendRedirect("index.jsp");
                 } else {
-                    // Đăng nhập thất bại
+                    // Đăng nhập thất bại alert 
                     out.println("<script type=\"text/javascript\">");
                     out.println("alert('Tên người dùng hoặc mật khẩu không chính xác');");
                     out.println("location='dangnhap.html';");

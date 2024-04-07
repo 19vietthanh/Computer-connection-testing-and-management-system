@@ -2,21 +2,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f8f0e6; /* Light orange background */
+    background-color: #f8f0e6; /* Màu cam sáng cho nền*/
 }
 
 .form-content {
     width: 400px;
-    margin: 0 auto; /* Center the form */
+    margin: 0 auto; /* canh giữa cho form */
     padding: 30px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background-color: #fff; /* White form background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; /* màu nền trắng */
 }
 
 h1 {
     text-align: center;
-    color: #f7931b; /* Vibrant orange heading */
+    color: #f7931b;
     margin-bottom: 20px;
 }
 
@@ -39,8 +39,8 @@ input[type="password"] {
     display: block;
     width: 100%;
     padding: 15px 20px;
-    background-color: #f7931b; /* Orange button background */
-    color: #fff; /* White button text */
+    background-color: #f7931b; /* màu nền nút cam */
+    color: #fff; /* màu chữ nút màu trắng */
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -49,7 +49,7 @@ input[type="password"] {
 }
 
 .btn:hover {
-    background-color: #f57c00; /* Slightly darker orange on hover */
+    background-color: #f57c00; /* Khi chuyển đến nút, màu nút sẽ chuyển sang màu cam thẫm */
 }
 
 .content{
@@ -58,15 +58,6 @@ input[type="password"] {
     color: #333;
 }
 
-a {
-    color: #f7931b; /* Orange link text */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-    color: #f57c00; /* Slightly darker orange on hover */
-}
 .container {
     display: grid;
     place-items: center;
@@ -75,4 +66,3 @@ a:hover {
     margin-top: 20px;
     color: #333;
 }
-

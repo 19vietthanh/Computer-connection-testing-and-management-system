@@ -5,6 +5,11 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import java.sql.*;
 
+/**
+ *
+ * @author Viet Thanh
+ */
+
 public class DangKy extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -43,8 +48,11 @@ public class DangKy extends HttpServlet {
                 out.println("location='dangnhap.html';");
                 out.println("</script>");
             } else {
-                // Đăng ký thất bại
-                response.sendRedirect("dangky.html");
+                // Đăng ký thất bại thông báo và chuyển hướng lại trang đăng ký
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Đăng ký thất bại');");
+                out.println("location='dangky.html';");
+                out.println("</script>");
             }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -64,3 +72,8 @@ public class DangKy extends HttpServlet {
         }
     }
 }
+/*
+Các trường hợp đăng ký thất bại
+Trùng email
+Trùng username
+*/

@@ -44,7 +44,9 @@ form select {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+form {
+    margin-bottom: 20px;
+}
 form input[type="submit"] {
     background-color: #4caf50;
     color: white;
@@ -132,7 +134,7 @@ footer {
 
 .nav form, .nav h2 {
     display: inline-flex;  /*Hiển thị các form và tiêu đề ngang hàng */
-    margin: 2 px;  /*Khoảng cách giữa các phần tử */
+    margin: 2px;  /*Khoảng cách giữa các phần tử */
 }
 
 .nav p {
@@ -149,3 +151,4 @@ footer {
     font-size: 20px;
     color: #ffA;
 }
+

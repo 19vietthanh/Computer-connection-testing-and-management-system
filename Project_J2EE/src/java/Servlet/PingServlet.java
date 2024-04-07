@@ -8,6 +8,11 @@ import jakarta.servlet.http.*;
 import java.net.*;
 import java.util.Scanner;
 
+/**
+ *
+ * @author Viet Thanh
+ */
+
 public class PingServlet extends HttpServlet {
 
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/db_quanlymaytinh";

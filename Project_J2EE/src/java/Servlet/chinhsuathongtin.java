@@ -5,6 +5,11 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import java.sql.*;
 
+/**
+ *
+ * @author Viet Thanh
+ */
+
 public class chinhsuathongtin extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
