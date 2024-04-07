@@ -13,6 +13,7 @@
             User loggedInUser = (User) session.getAttribute("user");
             if (loggedInUser == null) {             
                 response.sendRedirect("dangnhap.html");
+                return;
             }
         %>
     <div class="nav">    
