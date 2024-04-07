@@ -23,12 +23,18 @@
                         <input type="password" name="password" placeholder="Mật khẩu" required>
                     </div>
                     <button type="submit" class="btn">Đăng nhập</button>
-                    <a href="#">Quên mật khẩu?</a>
+                    <a href="#" id="forgotPassword">Quên mật khẩu?</a>
                 </form>
                 <p>Bạn chưa có tài khoản? </p>
                 <a href="dangky.html"><button> Đăng ký</button> </a>
 
             </div>
         </div>
+        <script>
+            document.getElementById("forgotPassword").addEventListener("click", function (event) {
+                event.preventDefault();
+                alert("Chức năng đang được phát triển!");
+            });
+        </script>
     </body>
 </html>
