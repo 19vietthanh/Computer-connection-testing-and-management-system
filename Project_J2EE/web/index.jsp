@@ -11,7 +11,7 @@
         <%
             session = request.getSession();
             User loggedInUser = (User) session.getAttribute("user");
-            if (loggedInUser == null) {
+            if (loggedInUser == null || session.isNew()) { // Thêm điều kiện session.isNew()                
                 response.sendRedirect("dangnhap.html");
             }
         %>
@@ -171,7 +171,7 @@
         <td><%= TrangThai %></td>
         <td class="connection-time" data-connection-time="<%= lastConnectionTimeString %>">0 phút trước</td>
         <td>
-            
+
             <%--Xóa từng máy trong hệ thống--%>
             <form action="./xoamay" method="POST" onsubmit="return confirmDelete();">
                 <input type="hidden" name="IP" value="<%= IP %>">
