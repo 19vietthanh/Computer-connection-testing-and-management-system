@@ -132,7 +132,7 @@
         </form>
         <a href="update.jsp" class="update">Chỉnh sửa thông tin</a>
 
-        <form action="./delete" method="POST" onsubmit="return confirmDelete();">
+        <form action="./delete" method="POST" onsubmit="return confirmAllDelete();">
             <input type="submit" class="delete" value="Xóa tất cả dữ liệu">
         </form>
 
@@ -170,7 +170,11 @@
         <td><%= rom %></td>
         <td><%= TrangThai %></td>
         <td class="connection-time" data-connection-time="<%= lastConnectionTimeString %>">0 phút trước</td>
-        <td><input type="button" value="🗑️"></td>
+        <td>
+            <form action="./xoamay" method="POST" onsubmit="return confirmDelete();">
+                <input type="submit" value="️🗑️">
+            </form>
+        </td>
     </tr>
     <%
             }
@@ -189,8 +193,11 @@
     %>
 </table>
 <script>
-    function confirmDelete() {
+    function confirmAllDelete() {
         return confirm("Bạn có chắc chắn muốn xóa tất cả dữ liệu không?");
+    }
+    function confirmDelete() {
+        return confirm("Bạn có chắc chắn muốn xóa máy này không?");
     }
 </script>
 

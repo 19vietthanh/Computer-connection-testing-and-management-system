@@ -4,7 +4,7 @@
         <servlet-name>KiemTra</servlet-name>
         <servlet-class>Servlet.KiemTra</servlet-class>
     </servlet>
-<!--    <servlet>
+    <!--    <servlet>
         <servlet-name>HomePage</servlet-name>
         <servlet-class>Servlet.Welcome</servlet-class>
     </servlet>-->
@@ -40,11 +40,15 @@
         <servlet-name>chinhsuathongtin</servlet-name>
         <servlet-class>Servlet.chinhsuathongtin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>xoamay</servlet-name>
+        <servlet-class>Servlet.xoamay</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>KiemTra</servlet-name>
         <url-pattern>/KiemTra</url-pattern>
     </servlet-mapping>
-<!--    <servlet-mapping>
+    <!--    <servlet-mapping>
         <servlet-name>HomePage</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>-->
@@ -79,5 +83,9 @@
     <servlet-mapping>
         <servlet-name>chinhsuathongtin</servlet-name>
         <url-pattern>/chinhsuathongtin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>xoamay</servlet-name>
+        <url-pattern>/xoamay</url-pattern>
     </servlet-mapping>
 </web-app>
