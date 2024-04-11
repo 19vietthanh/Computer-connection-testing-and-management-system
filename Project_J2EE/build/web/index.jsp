@@ -7,7 +7,7 @@
         <title>Trang quản lý máy tính</title>
         <link rel="stylesheet" href="home.css">
         <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    
+
         <%
             session = request.getSession();
             User loggedInUser = (User) session.getAttribute("user");
