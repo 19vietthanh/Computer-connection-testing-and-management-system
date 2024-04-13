@@ -68,7 +68,7 @@
         </tr>
         <tr>
             <th>RAM</th>
-            <th>ROM</th>
+            <th>Hard disk</th>
         </tr>
         <%
               do {
@@ -134,7 +134,7 @@
                 <th>Hệ điều hành</th>
                 <th>Vai trò</th>
                 <th>Dung lượng RAM (GB)</th>
-                <th>Dung lượng ROM (GB)</th>
+                <th>Dung lượng đĩa cứng (GB)</th>
             </tr>
             <tr>
                 <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" required></td>
