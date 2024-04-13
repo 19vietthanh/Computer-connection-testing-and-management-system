@@ -19,6 +19,7 @@ public class delete extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
 
         try {
 
@@ -26,8 +27,7 @@ public class delete extends HttpServlet {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_quanlymaytinh", "root", "");
 
             // Prepare delete statement
-            Statement statement = null;
-            statement = connection.createStatement();
+            Statement statement = connection.createStatement();
 
             String query = "DELETE FROM tt_computer";
             statement.executeUpdate(query);
@@ -36,8 +36,13 @@ public class delete extends HttpServlet {
             statement.close();
             connection.close();
 
-            // Redirect to main page after successful delete
-            response.sendRedirect("index.jsp");
+            // Add JavaScript alert before redirecting
+            PrintWriter out = response.getWriter();
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Tất cả máy đã được xóa');");
+            out.println("window.location.href = 'index.jsp';");
+            out.println("</script>");
+
         } catch (SQLException ex) {
             Logger.getLogger(delete.class.getName()).log(Level.SEVERE, null, ex);
         }

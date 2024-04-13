@@ -71,7 +71,6 @@
             <h3>Thêm máy tính vào hệ thống</h3>
             <td colspan="5"><h3>Nhập thông tin máy tính </h3></td>
 
-
             <tr>
                 <th>Địa chỉ máy</th>
                 <th>Hệ điều hành</th>

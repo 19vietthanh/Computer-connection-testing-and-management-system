@@ -137,7 +137,7 @@
                 <th>Dung lượng đĩa cứng (GB)</th>
             </tr>
             <tr>
-                <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" required></td>
+                <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" readonly></td>
                 <td>
                     <select name="HeDieuHanh" required>
                         <option value="">-- Chọn hệ điều hành --</option>
@@ -156,7 +156,7 @@
                 <td>
                     <input type="Number" name="RAM" placeholder="Nhập dung lượng RAM" required></td>
                 <td>
-                    <input type="Number" name="ROM" placeholder="Nhập dung lượng ROM" required>
+                    <input type="Number" name="ROM" placeholder="Nhập dung lượng đĩa cứng" required>
                 </td>
             </tr>
             <tr>

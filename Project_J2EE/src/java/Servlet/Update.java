@@ -73,7 +73,7 @@ public class Update extends HttpServlet {
         }
 
         // Set response content type
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
 
         // Write response
         try (PrintWriter out = response.getWriter()) {
@@ -89,7 +89,10 @@ public class Update extends HttpServlet {
             }
             out.println("</body>");
             out.println("</html>");
-            response.sendRedirect("index.jsp");
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Đã cập nhật thông tin thành công!');");
+            out.println("window.location.href = 'index.jsp';");
+            out.println("</script>");
         }
     }
 

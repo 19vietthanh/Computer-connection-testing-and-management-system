@@ -13,12 +13,13 @@ import java.util.logging.Logger;
  *
  * @author Viet Thanh
  */
-
 public class xoamay extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+
         String IP = request.getParameter("IP");
 
         if (IP == null || IP.isEmpty()) {
@@ -44,8 +45,11 @@ public class xoamay extends HttpServlet {
             preparedStatement.close();
             connection.close();
 
-            // Redirect to main page after successful delete
-            response.sendRedirect("index.jsp");
+            PrintWriter out = response.getWriter();
+            out.println("<script type=\"text/javascript\">");
+            out.println("alert('Máy đã được xóa');");
+            out.println("window.location.href = 'index.jsp';");
+            out.println("</script>");
         } catch (SQLException ex) {
             Logger.getLogger(delete.class.getName()).log(Level.SEVERE, null, ex);
         }
