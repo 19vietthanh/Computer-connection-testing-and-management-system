@@ -203,6 +203,16 @@
         return confirm("Bạn có chắc chắn muốn xóa máy này không?");
     }
 </script>
+<script>
+    // Đảm bảo mã JavaScript được thực thi sau khi toàn bộ DOM đã được tải
+    document.addEventListener("DOMContentLoaded", function () {
+        // Tạo đối tượng XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+        // Gửi yêu cầu GET đến servlet TestConn
+        xhr.open("GET", "./TestConn", true);
+        xhr.send();
+    });
+</script>
 
 </body>
 
