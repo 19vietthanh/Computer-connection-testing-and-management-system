@@ -77,7 +77,7 @@
                 <th>Hệ điều hành</th>
                 <th>Vai trò</th>
                 <th>Dung lượng RAM (GB)</th>
-                <th>Dung lượng ROM (GB)</th>
+                <th>Dung lượng Đĩa cứng (GB)</th>
             </tr>
             <tr>
                 <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" required></td>
@@ -99,7 +99,7 @@
                 <td>
                     <input type="Number" name="RAM" placeholder="Nhập dung lượng RAM" required></td>
                 <td>
-                    <input type="Number" name="ROM" placeholder="Nhập dung lượng ROM" required>
+                    <input type="Number" name="ROM" placeholder="Nhập dung lượng đĩa cứng" required>
                 </td>
             </tr>
             <tr>
