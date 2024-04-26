@@ -23,6 +23,13 @@ h3 {
     text-align: center;
     color: #0073b7; /* Màu xanh dương cho subheading */
 }
+h4 {
+    font-size:30px;
+    margin-top: 10px;
+    /*margin-bottom: 0px;*/
+    text-align: center;
+    color: #FFA926
+}
 
 h2 {
     font-size: 25px;
@@ -86,3 +93,14 @@ ul li:hover {
     color: #005997;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; /* Điều chỉnh khoảng cách từ đỉnh trang */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
