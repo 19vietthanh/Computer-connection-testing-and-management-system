@@ -66,7 +66,7 @@
         <h1>Hệ thống quản lý kết nối máy tính</h1>
     </header>
 
-    <form action="./testPingServlet" method="POST">
+    <form action="./PingServlet" method="POST">
         <table>
             <h3>Thêm máy tính vào hệ thống</h3>
             <td colspan="5"><h3>Nhập thông tin máy tính </h3></td>
@@ -75,7 +75,8 @@
                 <th>Địa chỉ máy</th>
                 <th>Hệ điều hành</th>
                 <th>Vai trò</th>
-               
+                <th>Dung lượng RAM (GB)</th>
+                <th>Dung lượng đĩa cứng (GB)</th>
             </tr>
             <tr>
                 <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" required></td>
@@ -94,7 +95,11 @@
                         <option value="CaNhan">Cá nhân</option>
                     </select>
                 </td>
-                
+                <td>
+                    <input type="Number" name="RAM" placeholder="Nhập dung lượng RAM" required></td>
+                <td>
+                    <input type="Number" name="ROM" placeholder="Nhập dung lượng đĩa cứng" required>
+                </td>
             </tr>
             <tr>
                 <td colspan="5"><input type="submit" value="Thêm máy tính"></td>

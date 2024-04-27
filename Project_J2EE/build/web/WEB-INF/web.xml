@@ -18,7 +18,7 @@
     </servlet>
     <servlet>
         <servlet-name>PingServlet</servlet-name>
-        <servlet-class>Servlet.PingServlet</servlet-class>
+        <servlet-class>.PingServlet1</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>TestConn</servlet-name>
@@ -43,6 +43,10 @@
     <servlet>
         <servlet-name>xoamay</servlet-name>
         <servlet-class>Servlet.xoamay</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>testPingServlet</servlet-name>
+        <servlet-class>Servlet.PingServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>KiemTra</servlet-name>
@@ -87,5 +91,9 @@
     <servlet-mapping>
         <servlet-name>xoamay</servlet-name>
         <url-pattern>/xoamay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>testPingServlet</servlet-name>
+        <url-pattern>/testPingServlet</url-pattern>
     </servlet-mapping>
 </web-app>
