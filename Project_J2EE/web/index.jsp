@@ -198,14 +198,24 @@
         return confirm("Bạn có chắc chắn muốn xóa máy này không?");
     }
 </script>
+
 <script>
     // Đảm bảo mã JavaScript được thực thi sau khi toàn bộ DOM đã được tải
     document.addEventListener("DOMContentLoaded", function () {
-        // Tạo đối tượng XMLHttpRequest
-        var xhr = new XMLHttpRequest();
-        // Gửi yêu cầu GET đến servlet TestConn
-        xhr.open("GET", "./TestConn", true);
-        xhr.send();
+        // Hàm gọi đến servlet TestConn
+        function callTestConnServlet() {
+            // Tạo đối tượng XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            // Gửi yêu cầu GET đến servlet TestConn
+            xhr.open("GET", "./TestConn", true);
+            xhr.send();
+        }
+
+        // Gọi đến servlet TestConn ngay khi trang được tải
+        callTestConnServlet();
+
+        // Gọi đến servlet TestConn mỗi 3 phút = 1*60*1000
+        setInterval(callTestConnServlet, 3 * 60 * 1000); // 3 phút * 60 giây/phút * 1000 mili giây/giây
     });
 </script>
 
