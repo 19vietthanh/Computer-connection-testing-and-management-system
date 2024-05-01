@@ -68,7 +68,7 @@
         </tr>
         <tr>
             <th>RAM</th>
-            <th>Hard disk</th>
+            <th>Tổng bộ nhớ ảo</th>
         </tr>
         <%
               do {
@@ -134,7 +134,7 @@
                 <th>Hệ điều hành</th>
                 <th>Vai trò</th>
                 <th>Dung lượng RAM (GB)</th>
-                <th>Dung lượng đĩa cứng (GB)</th>
+                <th>Dung lượng bộ nhớ ảo (GB)</th>
             </tr>
             <tr>
                 <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" readonly></td>
@@ -154,9 +154,10 @@
                     </select>
                 </td>
                 <td>
-                    <input type="Number" name="RAM" placeholder="Nhập dung lượng RAM" required></td>
+                    <input type="text" name="RAM" placeholder="Nhập dung lượng RAM" required>
+                </td>
                 <td>
-                    <input type="Number" name="ROM" placeholder="Nhập dung lượng đĩa cứng" required>
+                    <input type="text" name="ROM" placeholder="Nhập dung lượng bộ nhớ ảo"required>
                 </td>
             </tr>
             <tr>
@@ -174,6 +175,7 @@
             document.querySelector('form[action="./Update"]').style.display = "block";
         }
     </script>
+
 
 </body>
 </html>

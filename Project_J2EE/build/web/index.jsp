@@ -83,8 +83,8 @@
                     <select name="HeDieuHanh" required>
                         <option value="">-- Chọn hệ điều hành --</option>
                         <option value="Windows">Windows</option>
-                        <option value="Linux">Linux</option>
-                        <option value="MacOS">MacOS</option>
+                        <option value="Linux">Linux (Tính năng đang phát triển)</option>
+                        <option value="MacOS">MacOS (Tính năng đang phát triển)</option>
                     </select>
                 </td>
                 <td>
@@ -145,7 +145,7 @@
     </tr>
     <tr>
         <th>RAM</th>
-        <th>Hard disk</th>
+        <th>Tổng bộ nhớ ảo</th>
     </tr>
     <%
             while (resultSet.next()) {

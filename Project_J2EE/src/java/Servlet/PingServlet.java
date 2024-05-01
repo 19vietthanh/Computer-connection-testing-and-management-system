@@ -9,9 +9,6 @@ import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Servlet implementation class PingServlet
- */
 public class PingServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -19,10 +16,6 @@ public class PingServlet extends HttpServlet {
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "";
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     * response)
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String IP = request.getParameter("IP");
         String HDH = request.getParameter("HeDieuHanh");
@@ -42,8 +35,8 @@ public class PingServlet extends HttpServlet {
                 systemInfo = getWindowsSystemInfo();
             } else if (HDH.equalsIgnoreCase("Linux")) {
                 systemInfo = getLinuxSystemInfo();
-            }else if (HDH.equalsIgnoreCase("MacOS")) {
-//                systemInfo = getLinuxSystemInfo();
+            } else if (HDH.equalsIgnoreCase("MacOS")) {
+                systemInfo = getMacOSSystemInfo();
             }
         }
 
@@ -51,8 +44,19 @@ public class PingServlet extends HttpServlet {
         String ram = "";
         String rom = "";
 
-        String regexRam = "Total Physical Memory:\\s+(\\S+)";
-        String regexRom = "Virtual Memory: Max Size:\\s+(\\S+)";
+        String regexRam = "";
+        String regexRom = "";
+
+        if (HDH.equalsIgnoreCase("Windows")) {
+            regexRam = "Total Physical Memory:\\s+(\\S+)";
+            regexRom = "Virtual Memory: Max Size:\\s+(\\S+)";
+        } else if (HDH.equalsIgnoreCase("Linux")) {
+            regexRam = "Mem:\\s+(\\S+)";
+            regexRom = "Swap:\\s+(\\S+)";
+        } else if (HDH.equalsIgnoreCase("MacOS")) {
+            regexRam = "hw.memsize:\\s+(\\S+)";
+            regexRom = "vm.swapusage:\\s+(\\S+)";
+        }
 
         Pattern patternRam = Pattern.compile(regexRam);
         Pattern patternRom = Pattern.compile(regexRom);
@@ -129,12 +133,40 @@ public class PingServlet extends HttpServlet {
         try {
             Process process = Runtime.getRuntime().exec("free -h");
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            StringBuilder ramOutput = new StringBuilder();
+            StringBuilder romOutput = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Phân tích dòng chứa thông tin RAM
+                if (line.startsWith("Mem:")) {
+                    // Tách các từ trong dòng và lấy giá trị RAM
+                    String[] parts = line.split("\\s+");
+                    // RAM thường ở cột thứ 2
+                    ramOutput.append(parts[1]).append("\n");
+                } // Phân tích dòng chứa thông tin ROM
+                else if (line.startsWith("Swap:")) {
+                    // Tách các từ trong dòng và lấy giá trị ROM
+                    String[] parts = line.split("\\s+");
+                    // ROM thường ở cột thứ 2
+                    romOutput.append(parts[1]).append("\n");
+                }
+            }
+            // Trả về chuỗi chứa thông tin RAM và ROM
+            return "RAM: " + ramOutput.toString() + "ROM: " + romOutput.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error getting system info";
+        }
+    }
+
+    private String getMacOSSystemInfo() {
+        try {
+            Process process = Runtime.getRuntime().exec("sysctl hw.memsize vm.swapusage");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             StringBuilder output = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.startsWith("Mem:") || line.startsWith("Swap:")) {
-                    output.append(line).append("\n");
-                }
+                output.append(line).append("\n");
             }
             return output.toString();
         } catch (IOException e) {
@@ -142,5 +174,4 @@ public class PingServlet extends HttpServlet {
             return "Error getting system info";
         }
     }
-
 }
