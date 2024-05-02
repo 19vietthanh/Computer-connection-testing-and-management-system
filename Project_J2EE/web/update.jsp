@@ -18,7 +18,7 @@
 
     <form action="" method="POST">
         <label>Tìm thông tin máy: </label>
-        <input type="text" name="IP_Search" required> 
+        <input type="text" name="IP_Search" placeholder="IP" required> 
         <input type="submit" value="Tìm" class="find">
     </form>
     <br>
