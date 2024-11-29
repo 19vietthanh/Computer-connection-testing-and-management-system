@@ -11,7 +11,7 @@ There is a combination of Servlet, jsp, MySQL database through jdbc.
 
 # Download Setting here: 
 	https://drive.google.com/file/d/1qLC4CDK8XWwPy5JLRY_1hv-UwWnjrZJT/view?usp=sharing
-# Bố trí thư mục dự án như sau
+# The project folder layout is as follows	
 	Web pages
 	|	- WEB-INF
 	|	|	-- glassfish-web.xml
