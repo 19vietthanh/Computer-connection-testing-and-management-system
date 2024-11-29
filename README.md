@@ -8,3 +8,25 @@ Setting :
 	Import Database: db_quanlymaytinh.sql
 
 Download Setting here: https://drive.google.com/file/d/1qLC4CDK8XWwPy5JLRY_1hv-UwWnjrZJT/view?usp=sharing
+
+Web pages
+|	- WEB-INF
+|	|	-- glassfish-web.xml
+|	|	-- web.xml
+|	- J2Map.jpg
+|	- dangky.html
+|	- dangnhap.css
+|	- dangnhap.html
+|	- favicon.ico
+|	- home.css
+|	- index.html
+|	- index.jsp
+|	- inf_user.css
+|	- inf_user.jsp
+|	- style.css
+|	- update.css
+|	- update.jsp
+Source Packages
+|	- Data
+|	|	-- User.java
+|	- Servlet
