@@ -9,7 +9,7 @@ There is a combination of Servlet, jsp, MySQL database through jdbc.
 - Mysql in Xampp v3.3.0,
 - Import Database: db_quanlymaytinh.sql
 
-# Download Setting here: 
+# Download Setting: 
 	https://drive.google.com/file/d/1qLC4CDK8XWwPy5JLRY_1hv-UwWnjrZJT/view?usp=sharing
 # The project folder layout is as follows	
 	Web pages
@@ -33,3 +33,14 @@ There is a combination of Servlet, jsp, MySQL database through jdbc.
 	|	- Data
 	|	|	-- User.java
 	|	- Servlet
+	|	|	-- Dangky.java
+	|	|	-- Kiemtra.java
+	|	|	-- Logout.java
+	|	|	-- PingServlet.java
+	|	|	-- TestConn.java
+	|	|	-- Update.java
+	|	|	-- chinhsuathongtin.java
+	|	|	-- delete.java
+	|	|	-- search.java
+	|	|	-- xoamay.java
+	...
