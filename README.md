@@ -3,11 +3,11 @@ Description: A project implemented using J2EE technology on a computer connectio
 There is a combination of Servlet, jsp, MySQL database through jdbc.
 
 # Setting :
-	- JDK: 1.8,
-	- Glasfish 6.0.0,
-	- Netbeans 20,
-	- Mysql in Xampp v3.3.0,
-	- Import Database: db_quanlymaytinh.sql
+- JDK: 1.8,
+- Glasfish 6.0.0,
+- Netbeans 20,
+- Mysql in Xampp v3.3.0,
+- Import Database: db_quanlymaytinh.sql
 
 # Download Setting here: 
 	https://drive.google.com/file/d/1qLC4CDK8XWwPy5JLRY_1hv-UwWnjrZJT/view?usp=sharing
