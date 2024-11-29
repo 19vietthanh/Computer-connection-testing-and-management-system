@@ -10,9 +10,7 @@ There is a combination of Servlet, jsp, MySQL database through jdbc.
 - Import Database: db_quanlymaytinh.sql
 
 # Download Setting:
-	```
-	https://drive.google.com/file/d/1qLC4CDK8XWwPy5JLRY_1hv-UwWnjrZJT/view?usp=sharing
- 	```
+https://drive.google.com/file/d/1qLC4CDK8XWwPy5JLRY_1hv-UwWnjrZJT/view?usp=sharing
 # The project folder layout is as follows	
 	Web pages
 	|	- WEB-INF
