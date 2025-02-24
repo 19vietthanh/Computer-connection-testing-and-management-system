@@ -75,7 +75,7 @@
                 <th>Địa chỉ máy</th>
                 <th>Hệ điều hành</th>
                 <th>Vai trò</th>
-               
+
             </tr>
             <tr>
                 <td><input type="text" name="IP" placeholder="Nhập địa chỉ máy" required></td>
@@ -94,7 +94,7 @@
                         <option value="CaNhan">Cá nhân</option>
                     </select>
                 </td>
-                
+
             </tr>
             <tr>
                 <td colspan="5"><input type="submit" value="Thêm máy tính"></td>
