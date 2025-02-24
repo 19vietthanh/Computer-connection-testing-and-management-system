@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Đăng nhập</title>
+        <title>Log in - J2EE</title>
         <link rel="stylesheet" href="dangnhap.css">
         <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 
@@ -12,28 +12,32 @@
         <div class="container">
             <div class="form-container">
 
-                <form id="login" class="form-content" action="./KiemTra">
-                    <h1>Đăng nhập</h1>
+                <form id="login" class="form-content" action="./KiemTra" method="POST">
+                    <h1>Log In </h1>
+                    <div class="header_login_text">Don't have an account?
+                        <span ><a class="signup_btn" href="dangky.html">Sign up</a></span>
+                    </div>
+                    
                     <div class="input-container">
-                        <p class="text">Tên đăng nhập</p>
-                        <input type="text" name="username" placeholder="Tên đăng nhập" required>
+                        <p class="text">Username</p>
+                        <input type="text" name="username" placeholder="username" required>
                     </div>
                     <div class="input-container">
-                        <p class="text">Mật khẩu</p>
-                        <input type="password" name="password" placeholder="Mật khẩu" required>
+                        <p class="text">Password</p>
+                        <input type="password" name="password" placeholder="password" required>
                     </div>
-                    <button type="submit" class="btn">Đăng nhập</button>
-                    <a href="#" id="forgotPassword">Quên mật khẩu?</a>
+                    <div>
+                        <button type="submit" class="btn">Login</button>
+                        <a href="#" id="forgotPassword" ><button class="btn_diff">Forgot Password?</button></a>    
+                    </div>
                 </form>
-                <p>Bạn chưa có tài khoản? </p>
-                <a href="dangky.html"><button> Đăng ký</button> </a>
 
             </div>
         </div>
         <script>
             document.getElementById("forgotPassword").addEventListener("click", function (event) {
                 event.preventDefault();
-                alert("Chức năng đang được phát triển!");
+                alert("Function is under development!");
             });
         </script>
     </body>

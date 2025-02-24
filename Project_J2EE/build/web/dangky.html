@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="vi">
     <head>
-        <title>Đăng ký</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up - J2EE</title>
         <link rel="stylesheet" href="dangky.css">
         <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const passwordField = document.querySelector('input[name="password"]');
+                const rePasswordField = document.querySelector('input[name="repassword"]');
+                const errorMessage = document.createElement('p');
+                errorMessage.style.color = 'red';
+                errorMessage.style.fontSize = '0.9em';
+                errorMessage.style.marginTop = '5px';
+                errorMessage.style.display = 'none';
+                rePasswordField.parentNode.appendChild(errorMessage);
 
-
+                rePasswordField.addEventListener('input', function () {
+                    if (rePasswordField.value !== passwordField.value) {
+                        errorMessage.textContent = "Re-password không khớp với Password.";
+                        errorMessage.style.display = 'block';
+                    } else {
+                        errorMessage.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
-        <form id = "signup" class = "form-content" action = "./DangKy" method="post">
-            <h1>Đăng ký</h1>
-            <div class="input-container">
-                <p class="text">Họ và tên</p>
-                <input type = "text" name = "fullname" placeholder="Nhập họ và tên" required>
-            </div>
-            <div class="input-container">
-                <p class="text">Username</p>  
-                <input type = "text" name = "username" placeholder="Nhập username" required>
-            </div>
-            <div class="input-container">
-                <p class="text">Mật khẩu</p>
-                <input type = "password" name = "password" placeholder="Nhập mật khẩu" required>
-            </div>
-            <div class="input-container">
-                <p class="text">Email</p>
-                <input type = "email" name = "email" placeholder="Nhập địa chỉ email" required>
-            </div>
-            <button type="submit" class="btn">Đăng ký</button>
-        </form>
-
         <div class="container">
-            <p class="content">Bạn đã có tài khoản?</p>
-            <a href="dangnhap.html"><button class="button">Đăng nhập</button></a>
+            <div class="form-container">
+                <form id="signup" class="form-content" action="./DangKy" method="post">
+                    <h1>Sign Up</h1>
+                    <div class="header_login_text">Already have an account?
+                        <span><a class="signup_btn" href="dangnhap.html">Log In</a></span>
+                    </div>
+
+                    <div class="input-container">
+                        <p class="text">Full name</p>
+                        <input type="text" name="fullname" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-container">
+                        <p class="text">Username</p>
+                        <input type="text" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-container">
+                        <p class="text">Password</p>
+                        <input type="password" name="password" placeholder="Enter password" required>
+                    </div>
+                    <div class="input-container">
+                        <p class="text">Re-password</p>
+                        <input type="password" name="repassword" placeholder="Enter your password again" required>
+                    </div>
+                    <div class="input-container">
+                        <p class="text">Email</p>
+                        <input type="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit" class="btn">Sign up</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>

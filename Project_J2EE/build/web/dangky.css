@@ -1,68 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f8f0e6; /* Màu cam sáng cho nền*/
-}
-
-.form-content {
-    width: 400px;
-    margin: 0 auto; /* canh giữa cho form */
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    background-color: #fff; /* màu nền trắng */
-}
-
-h1 {
-    text-align: center;
-    color: #f7931b;
-    margin-bottom: 20px;
-}
-
-.input-container {
-    margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 12px 20px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #f7931b; /* màu nền nút cam */
-    color: #fff; /* màu chữ nút màu trắng */
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #f57c00; /* Khi chuyển đến nút, màu nút sẽ chuyển sang màu cam thẫm */
-}
-
-.content{
-    text-align: center;
-    margin-top: 20px;
-    color: #333;
+    background-color: #282a35; /* Màu nền cho toàn bộ trang */
+    font-family: Arial, sans-serif; /* Font chữ chính */
 }
 
 .container {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 10px 72px 50px 72px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+    max-width: 400px;
+    margin: auto;
+    width: 360px;
+
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #ffffff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3; 
+}
+
+.btn_diff{
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn_diff:hover {
+    background-color: #ffb3b3;
+}
+a {
+    text-decoration: none; 
+    color: #007bff;  
+}
+
+a:hover {
+    color: #0056b3;
 }
 .text{
     margin-top: 20px;
     color: #333;
+}
+.header_login_text{
+    align-items: flex-start;
+    font-family: Source Sans Pro;
+    font-size: 15px;
+    font-weight: 600;
+    grid-area: header_login_text;
+    margin-top: 2rem;
+    text-align: end;
+}
+.signup_btn{
+    color: #34a853;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
 }

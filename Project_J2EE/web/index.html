@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html lang="vi">
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
     <head>
+        <title>J2EE Project</title>
         <meta charset="UTF-8">
-        <title>Project J2EE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
     </head>
     <body>
-        <h1>Hệ thống kiểm tra và quản lý kết nối máy tính</h1>
+        <div class="wrapper">
+            <div class="box box-left"></div>
+            <div class="box box-center">    
+                <h1>Hệ thống kiểm tra và quản lý kết nối máy tính</h1>
+                <h1 style="color:#5c2966;font-size: 25px">Computer connection testing and management system</h1>
+            </div>
+            <div class="box box-right">
+                <a href="dangky.html" class="dangky">Sign Up</a> <!-- Trang đăng ký -->
+                <a href="dangnhap.html" class="dangnhap">Log In</a> <!-- Trang đăng nhập -->
+            </div>
+        </div>
         <h2>Xây dựng và phát triển bởi: Phạm Việt Thành MSSV: B2104787 </h2>
-
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <p>
             Hệ thống kiểm tra và quản lý kết nối máy tính cho phép người quản trị có thể kiểm tra trạng thái tắt mở máy, đồng thời xem các thông số về cấu hình của máy tính trong mạng.
         </p>
@@ -55,13 +93,5 @@
             <img src="./J2Map.jpg" alt="">
         </div>
 
-
-        <div class="div">
-            <h2>Try now !!</h2>
-            <div class="container">
-                <a href="dangnhap.html" class="dangnhap">Đăng nhập</a> <!-- Trang đăng nhập -->
-                <a href="dangky.html" class="dangky">Đăng ký</a> <!-- Trang đăng ký -->
-            </div>
-        </div>
     </body>
 </html>
