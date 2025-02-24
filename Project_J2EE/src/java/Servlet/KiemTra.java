@@ -50,7 +50,7 @@ public class KiemTra extends HttpServlet {
                 } else {
                     // Đăng nhập thất bại alert 
                     out.println("<script type=\"text/javascript\">");
-                    out.println("alert('Tên người dùng hoặc mật khẩu không chính xác');");
+                    out.println("alert('Incorrect username or password');");
                     out.println("location='dangnhap.html';");
                     out.println("</script>");
                 }
